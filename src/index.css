@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition-cool{
+    transition: all 0.3s ease;
+}
+.transform-cool:hover{
+    transform: scale(1.01);
+}
+.transform-cool-m:hover{
+    transform: scale(1.05);
+}
+.shadow-cool{
+    box-shadow: 5px 12px 15px rgb(19, 1, 1);
+}
+.shadow-cool:hover{
+    box-shadow: 5px 12px 15px rgb(245, 94, 0);
+}
+header nav ul li a.active{
+    color: rgb(245, 94, 0);
+}
