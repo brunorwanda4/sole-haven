@@ -1,7 +1,7 @@
 //start
 const Product = () => {
   return (
-    <div>Product</div>
+    <section className=" pt-16">Product</section>
   )
 }
 

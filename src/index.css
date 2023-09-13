@@ -11,6 +11,10 @@
 .transform-cool-m:hover{
     transform: scale(1.05);
 }
+.transform-cool-l:hover{
+    transform: scale(1.1);
+}
+
 .shadow-cool{
     box-shadow: 5px 12px 15px rgb(19, 1, 1);
 }
@@ -19,4 +23,38 @@
 }
 header nav ul li a.active{
     color: rgb(245, 94, 0);
+}
+.rounded-cool{
+    border-radius: 0px 5px 5px 0px;
+  }
+.rounded-cool-one{
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+}
+.shadow-cool-h{
+    box-shadow: 5px 2px 15px rgb(245, 94, 0);
+}
+.shadow-cool-o{
+    box-shadow: 5px 12px 15px rgb(245, 94, 0);
+}
+.shadow-cool-o:hover{
+    box-shadow: 5px 12px 15px rgb(19, 1, 1);
+}
+/* hero shoes shadow*/
+.shadow-cool-s:hover{
+    box-shadow: 0px 1px 14px rgb(245, 94, 0);
+}
+@keyframes Zoom {
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.animation-cool{
+    animation: Zoom 2s linear infinite;
 }

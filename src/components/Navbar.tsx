@@ -11,6 +11,7 @@ import About from './About';
 import Product from './Product';
 import Contact from './Contact';
 import Service from './Service';
+import Footer from './Footer';
 //start
 const Navbar = () => {
     //hand name
@@ -42,10 +43,10 @@ const Navbar = () => {
   
   return (
    <Router>
-     <header className={`navbar ${hideNavbar ? 'hidden' : 'text-orange-950 p-1 md:p-[6px] flex flex-row gap-4 justify-between fixed w-full'}`}>
+     <header className={`navbar ${hideNavbar ? 'hidden' : 'text-orange-950 p-1 md:p-[6px] flex flex-row gap-4 justify-between fixed w-full bg-white shadow-cool-h'}`}>
         <NavLink to="/"  className=" flex flex-row transition-cool transform-cool group-even:hover:text-orange-500">
             <img src={logo} alt=" logo image" className=" cursor-pointer h-12 w-12 md:h-16 md:w-16" />
-            <h1 className=" font-bold text-5xl md:text-6xl hover:text-orange-600 transition-cool cursor-pointer">{handName()}</h1>
+            <h1 className=" font-bold text-5xl md:text-6xl hover:text-orange-600 transition-cool cursor-pointer hidden sm:flex">{handName()}</h1>
         </NavLink>
         <nav className=' flex flex-row '>
             {/* pages */}
@@ -98,9 +99,9 @@ const Navbar = () => {
                 </a>
             </div>
             {/* Get start */}
-            <a href="/contact" className=' hover:bg-orange-600 transition-cool transform-cool shadow-cool bg-orange-950 text-white rounded-md h-10 w-20 p-1 pt-[6px] font-bold md:mt-4 mt-1 transition-cool'>
+            <NavLink to="/contact" className=' hover:bg-orange-600 transition-cool transform-cool shadow-cool bg-orange-950 text-white rounded-md h-10 w-20 p-1 pt-[6px] font-bold md:mt-4 mt-1 transition-cool'>
                 Get Start
-            </a>
+            </NavLink>
      </header>
      <Routes>
         <Route path='/' element={<Home/>} />
@@ -109,6 +110,7 @@ const Navbar = () => {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/service' element={<Service/>} />
      </Routes>
+     <Footer/>
    </Router>
   )
 }
