@@ -75,6 +75,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      {/* footer padding */}
+      <div className=" pb-4"></div>
     </section>
   )
 }
