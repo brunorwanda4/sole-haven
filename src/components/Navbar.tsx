@@ -5,12 +5,14 @@ import {FaHome,} from 'react-icons/fa'
 import {BsPersonFill,BsPhoneFill,BsShop,BsPeopleFill,BsTwitter,BsFacebook,BsInstagram,BsTelegram} from 'react-icons/bs'
 // logo
 import logo from "../assets/img/logo.png"
+import bestProductIcon from '../assets/img/bestProduct.png'
+import topProductIcon from '../assets/img/topProduct.png'
 //pages
 import Home from './Home';
-import About from './About';
+import  BestProduct from './BestProduct';
+import TopProduct from './TopProduct'
 import Product from './Product';
 import Contact from './Contact';
-import Service from './Service';
 import Footer from './Footer';
 //start
 const Navbar = () => {
@@ -50,24 +52,24 @@ const Navbar = () => {
         </NavLink>
         <nav className=' flex flex-row '>
             {/* pages */}
-            <ul className=' flex flex-row gap-2 md:mt-5 mt-3'>
+            <ul className=' flex flex-row gap-2 md:mt-5 mt-3 '>
                 <li >
                     <NavLink to="/" className=' flex flex-row gap-1 cursor-pointer hover:text-orange-600 transition-cool transition-cool transform-cool'>
                      <FaHome className=' text-3xl transition-cool'/>
                      <span className=' font-bold text-2xl  hidden lg:flex transition-cool'>Home</span>
                     </NavLink>
                 </li>
-                <li >
-                   <NavLink to="/about" className=' flex flex-row gap-1 cursor-pointer hover:text-orange-600 transition-cool transition-cool transform-cool'>
-                     <BsPersonFill className=' text-3xl transition-cool'/>
-                     <span className=' font-bold text-2xl hidden lg:flex transition-cool'>About</span>
-                   </NavLink>
+                 <li >
+                    <NavLink to="/topProduct" className=' flex flex-row gap-1 cursor-pointer hover:text-orange-600 transition-cool transition-cool transform-cool'>
+                     <img src={topProductIcon} alt="Top product icon" className=" h-6 w-6" />
+                     <span className=' font-bold text-2xl hidden lg:flex transition-cool'>TopProduct</span>
+                    </NavLink>
                 </li>
                 <li >
-                    <NavLink to="/service" className=' flex flex-row gap-1 cursor-pointer hover:text-orange-600 transition-cool transition-cool transform-cool'>
-                     <BsPeopleFill className=' text-3xl transition-cool'/>
-                     <span className=' font-bold text-2xl hidden lg:flex transition-cool'>Service</span>
-                    </NavLink>
+                   <NavLink to="/bestProduct" className=' flex flex-row gap-1 cursor-pointer hover:text-orange-600 transition-cool transition-cool transform-cool'>
+                   <img src={bestProductIcon} alt="best product icon" className=" h-8 w-8" />
+                     <span className=' font-bold text-2xl hidden lg:flex transition-cool'> BestProduct</span>
+                   </NavLink>
                 </li>
                 <li >
                     <NavLink to="/product" className=' flex flex-row gap-1 cursor-pointer hover:text-orange-600 transition-cool transition-cool transform-cool'>    
@@ -105,10 +107,10 @@ const Navbar = () => {
      </header>
      <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About/>} />
+        <Route path='/bestProduct' element={<BestProduct/>} />
         <Route path='/product' element={<Product/>} />
         <Route path='/contact' element={<Contact/>} />
-        <Route path='/service' element={<Service/>} />
+        <Route path='//topProduct' element={<TopProduct/>} />
      </Routes>
      <Footer/>
    </Router>

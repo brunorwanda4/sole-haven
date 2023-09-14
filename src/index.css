@@ -24,6 +24,7 @@
 header nav ul li a.active{
     color: rgb(245, 94, 0);
 }
+/* footer */
 .rounded-cool{
     border-radius: 0px 5px 5px 0px;
   }
@@ -31,6 +32,7 @@ header nav ul li a.active{
     border-radius: 5px 0px 0px 5px;
     outline: none;
 }
+/* header */
 .shadow-cool-h{
     box-shadow: 5px 2px 15px rgb(245, 94, 0);
 }
@@ -71,4 +73,7 @@ header nav ul li a.active{
 }
 .animation-cool{
     animation: Zoom 2s linear infinite;
+}
+.rounded-cool-s{
+    border-radius: 0px 35px 0px 35px;
 }
