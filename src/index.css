@@ -1,9 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root{
+    --orange:  rgb(245, 94, 0);
+}
 .transition-cool{
     transition: all 0.3s ease;
+}
+.transition-cool-m{
+    transition: all 0.5s ease;
 }
 .transform-cool:hover{
     transform: scale(1.01);
@@ -16,14 +21,12 @@
 }
 
 .shadow-cool{
-    box-shadow: 5px 12px 15px rgb(19, 1, 1);
+    box-shadow: 5px 12px 15px rgb(235, 24, 24);
 }
 .shadow-cool:hover{
-    box-shadow: 5px 12px 15px rgb(245, 94, 0);
+    box-shadow: 5px 12px 15px rgb(19, 1, 1);
 }
-header nav ul li a.active{
-    color: rgb(245, 94, 0);
-}
+
 /* footer */
 .rounded-cool{
     border-radius: 0px 5px 5px 0px;
@@ -34,17 +37,17 @@ header nav ul li a.active{
 }
 /* header */
 .shadow-cool-h{
-    box-shadow: 5px 2px 15px rgb(245, 94, 0);
+    box-shadow: 5px 2px 15px var(--orange);
 }
 .shadow-cool-o{
-    box-shadow: 5px 12px 15px rgb(245, 94, 0);
+    box-shadow: 5px 12px 15px var(--orange);
 }
 .shadow-cool-o:hover{
     box-shadow: 5px 12px 15px rgb(19, 1, 1);
 }
 /* hero shoes shadow*/
 .shadow-cool-s:hover{
-    box-shadow: 0px 1px 14px rgb(245, 94, 0);
+    box-shadow: 0px 1px 14px var(--orange);
 }
 .animation-cool-p{
     animation: p 3.5s linear infinite;
@@ -76,4 +79,44 @@ header nav ul li a.active{
 }
 .rounded-cool-s{
     border-radius: 0px 35px 0px 35px;
+}
+/* gucci logo */
+.gucci-logo{
+    background-image: url('./assets/img/gucciBlack.png');
+    height: 24px;
+    width: 32px;
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5s all;
+}
+.gucci-logo:hover{
+    background-image: url('./assets/img/gucci.png');
+    height: 24px;
+    width: 32px;
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5s all;
+    transform: scale(1.1);
+}
+
+/* notification form */
+.notification-form{
+   inset: 8px -
+   15px auto auto !important;
+}
+/* dark mode */
+.dark {
+    @apply bg-gray-900 text-zinc-50
+}
+.light {
+    @apply bg-gray-200 text-zinc-950
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(2, 2, 2);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--orange);
+    border-radius: 2px;
 }

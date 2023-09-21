@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState,useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 //icons
-
+import {BsArrowRight} from 'react-icons/bs'
 // nike 1 shoes
 import nikeOneOne from '../../assets/img/shoes/nike/nike1.jpg'
 import nikeOneTwo from '../../assets/img/shoes/nike/nike1-2.jpg'
@@ -16,6 +17,10 @@ import nikeThreeTwo from '../../assets/img/shoes/nike/nike3-2.jpg'
 import nikeThreeThree from '../../assets/img/shoes/nike/nike3-3.jpg'
 //start
 const Hero1 = () => {
+  //title
+  useEffect(() => {
+    document.title ="ChikKick "
+  })
   // nike one image random
   const [nikeOne] = useState([nikeOneOne, nikeOneTwo,  nikeOneThree]);
   const [randomNikeOne, setRandomNikeOne] = useState('');
@@ -61,7 +66,7 @@ const Hero1 = () => {
         {/* shoes information */}
         <div className=' flex flex-col gap-2 transition-cool'>
             {/* shoes header */}
-            <h1 className=' font-bold text-4xl md:text-5xl  transition-cool bg-white'>
+            <h1 className=' font-bold text-4xl md:text-5xl  transition-cool '>
                 The New Arrival <br />
                 <span className=' text-orange-600'> Nike</span> Shoes
             </h1>
@@ -72,12 +77,18 @@ const Hero1 = () => {
             crafted to elevate your every step.
             </p>
             {/* buy link */}
-            <a href="./" className=' font-bold  transition-cool bg-orange-950 shadow-cool hover:bg-orange-600 text-white md:h-10 md:w-28 md:p-2 md:pl-4 text-base p-1 pl-2 h-8 w-24 rounded-3xl animation-cool md:mt-8 mt-4'>
+           <div className=' flex flex-row justify-between px-10 pt-4 text-start'>
+             <NavLink to="/nike" className=' text-white rounded-3xl shadow-cool hover:bg-orange-950 duration-300 font-bold bg-red-600 p-2 '>
                 Shop Now
-            </a>
-            <a href="./" className=' md:ml-44 ml-28  md:-mt-12 -mt-10  font-bold  transition-cool bg-orange-600 shadow-cool-o hover:bg-orange-950 text-white md:h-10 md:w-28 md:p-2 md:pl-4 text-base p-1 pl-2 h-8 w-24 rounded-3xl animation-cool'>
+              </NavLink>
+             <NavLink to="/BrunoRwanda/sneakers/Nike/jordanOne/1" className=' text-white rounded-3xl shadow-cool-o hover:bg-orange-950 duration-300 font-bold bg-orange-600   p-2'>
                 35000Frw
-            </a>
+             </NavLink>
+             {/* next btn */}
+             <button onClick={() => getRandomNikeOne()}>
+              <BsArrowRight/>
+             </button>
+           </div>
             {/* customer */}
             <div className=' md:mt-8 mt-4 flex flex-row md:gap-4 gap-3 transition-cool'>
                 <div className=' flex flex-col gap-1'>
@@ -108,18 +119,17 @@ const Hero1 = () => {
         </div>
         {/* shoes image */}
         <div className=' flex lg:flex-row flex-col'>
-           <a href="./">
-             <img src={randomNikeOne} alt=" Jordan one image" className=' md:h-96 md:w-auto h-72'  />
-           </a>
+           <NavLink to="/BrunoRwanda/sneakers/Nike/jordanOne/1">
+             <img src={randomNikeOne} alt=" Jordan one image" className=' md:h-96 md:w-auto h-72 rounded-md shadow-lg dark:shadow-gray-950'  />
+           </NavLink>
             {/* anther product image */}
-            <div className=' gap-4 flex lg:flex-col flex-row lg:pt-0 pt-10'>
+            <div className=' gap-4 flex flex-col mt-16 max-lg:flex-row max-xl:ml-4'>
                 <a href="./">
-                 <img src={randomNikeTwo} alt="Jordan 1 Mid " className=' h-44 w-44 rounded-md shadow-xl -mt-16 shadow-cool-s transition-cool'/>
+                 <img src={randomNikeTwo} alt="Jordan 1 Mid " className=' h-44 w-44 rounded-md shadow-lg -mt-16 shadow-cool-s transition-cool dark:shadow-gray-950'/>
                 </a>
                 <a href="./">
-                 <img src={randomNikeThree} alt="Nike sport shoes image" className=' h-44 w-44 rounded-md shadow-xl lg:-mt-0 -mt-16 shadow-cool-s transition-cool'/>
+                 <img src={randomNikeThree} alt="Nike sport shoes image" className=' h-44 w-44 rounded-md shadow-lg lg:-mt-0 -mt-16 shadow-cool-s transition-cool dark:shadow-gray-950'/>
                 </a>
-
             </div>
         </div>
 

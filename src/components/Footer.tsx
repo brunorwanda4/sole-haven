@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 //logo
-import logo from '../assets/img/logo.png'
-import gucci from '../assets/img/gucci.png'
+import shoesIcon from '../assets/img/icons/shoesIcon.png'
+import gucciIcon from '../assets/img/icons/gucci.png'
 //icons
-import { BsGeoAlt,BsPhone,BsFacebook,BsInstagram,BsTwitter,BsTelegram,BsSnapchat,BsChevronRight,BsBagFill} from 'react-icons/bs'
+import { BsGeoAltFill,BsPhone,BsFacebook,BsInstagram,BsTwitter,BsTelegram,BsSnapchat,BsChevronRight,BsBagFill} from 'react-icons/bs'
 import {IoIosMail} from 'react-icons/io'
 import {SiNike,SiAdidas,SiPuma,SiDior,SiNewbalance} from 'react-icons/si'
 
@@ -16,11 +16,11 @@ const Footer = () => {
         return name[inits]
     }
   return (
-    <footer className=' w-full p-2 md:p-8 transition-cool sm:p-4  bg-orange-950 text-white flex flex-col grid-flow-col grid-col-2 md:grid-col-4 justify-between sm:flex-row gap-4'>
+    <footer className=' max-md:flex-col w-full p-2 md:p-8 transition-cool sm:p-4  bg-orange-950 text-white flex  grid-flow-col grid-col-2 md:grid-col-4 justify-between flex-row gap-4'>
         {/* location */}
         <div className=' flex flex-col gap-2'>
        <a href="./" className=' flex flex-row mb-2 gap-2'>
-            <img src={logo} alt="logo" className=' h-10 w-10 '/>
+            <img src={shoesIcon} alt="logo" className=' h-10 w-10 '/>
             <h1 className=' font-bold text-4xl'>{handName()}</h1>
         </a>
         {/* cool name */}
@@ -30,7 +30,7 @@ const Footer = () => {
         </p>
         {/* location */}
         <div className='flex flex-row gap-1 cursor-pointer transform-cool-s transition-cool text-yellow-700'>
-          < BsGeoAlt className=' text-2xl '/>
+          < BsGeoAltFill className=' text-2xl '/>
           <span className=' text-xl'>
            Kigali Rwanda
           </span>
@@ -91,12 +91,12 @@ const Footer = () => {
           </li>
           <li>
             <NavLink to="/about"  className='flex flex-row gap-1'>
-              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>About</span>
+              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>Categories</span>
             </NavLink>
           </li>
           <li>
             <NavLink to="./service" className='flex flex-row gap-1'>
-              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>Service</span>
+              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>Brands</span>
             </NavLink>
           </li>
           <li>
@@ -106,7 +106,12 @@ const Footer = () => {
           </li>
           <li>
             <NavLink to="./contact" className='flex flex-row gap-1'>
-              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>Contact</span>
+              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>Popular</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="./contact" className='flex flex-row gap-1'>
+              <BsChevronRight className=' font-bold text-sm  text-orange-600 mt-2'/><span className=' hover:font-bold transition-cool transform-cool-s '>Sell</span>
             </NavLink>
           </li>
         </ul>
@@ -130,7 +135,7 @@ const Footer = () => {
           </li>
           <li>
             <a href="./"  className='flex flex-row gap-1 hover:font-bold transition-cool transform-cool-s '>
-              <img src={gucci} alt="gucci logo" className='h-6 w-6' /><span className=' hover:font-bold transition-cool transform-cool-s '>Gucci</span>
+              <img src={gucciIcon } alt="gucci logo" className='h-6 w-6' /><span className=' hover:font-bold transition-cool transform-cool-s '>Gucci</span>
             </a>
           </li>
           <li>

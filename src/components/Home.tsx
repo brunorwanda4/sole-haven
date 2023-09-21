@@ -1,13 +1,18 @@
+import {useRef} from "react"
+//pages
 import CoolBestProduct from "./bestProduct/CoolBestProduct"
 import MaqueenBestProduct from "./bestProduct/MaqueenBestProduct"
 import NikeBestProduct6 from "./bestProduct/NikeBestProduct6"
 import NikeBestProduct1 from "./bestProduct/nikeBestProduct1"
 import Hero1 from "./hero/Hero1"
 import GucciPopular1 from "./popular/gucciPopular1"
+// import JordanBest6 from "./popular/JordanBest6"
 //start
 const Home = () => {
+  // slide heroes
+  const sliderRef = useRef(null);
   return (
-    <section className=" pt-20 p-2 gap-4 flex flex-col">
+    <section className=" pt-24 p-2 gap-4 flex flex-col">
       <div>
        <Hero1/>
       </div>
@@ -16,6 +21,7 @@ const Home = () => {
         <h2 className=" font-bold max-md:text-4xl max-sm:text-3xl text-5xl ">
           Our <span className=" text-orange-600">Popular</span> Products
         </h2>
+        {/* <JordanBest6/> */}
         <div className=" flex gap-2 lg:gap-14 max-sm:flex-col ">
          <NikeBestProduct1/>
          <MaqueenBestProduct/>

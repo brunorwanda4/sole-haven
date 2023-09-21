@@ -1,12 +1,17 @@
-//page
-import Navbar from "./components/Navbar"
+import {useState} from 'react'
+import Navbar from './components/Navbar';
 
-//start
 const App = () => {
+  const [darkMode, setDarkMode] =useState(true)
+  function toggleDarkMode() {
+    setDarkMode(prevDarkMode => !prevDarkMode)
+  }
   return (
-    <main>
-      <Navbar/>
+    <main className={`bg-gray-200 ${darkMode ? 'dark' : 'light'}`}>
+      <Navbar DarkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
+      {/* Rest of your content */}
     </main>
-  )
-}
-export default App
+  );
+};
+
+export default App;
