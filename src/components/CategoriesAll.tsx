@@ -1,25 +1,21 @@
-import AllCategories from "./categories/AllCategories"
-import AllCategoriesForm from "./categories/AllCategoriesForm"
-
+import AllCategoriesFormImages from "./categories/AllCategoriesFormImages"
+//icons
+import shoesIcon from '../assets/img/icons/shoesIcon.png'
 //start categories 
 const CategoriesAll = () => {
   return (
     <section className=" pt-24 p-2 pb-4">
         {/* title  */}
-        <div className=" mt-3 max-md:mt-10">
-            <h1 className=" text-start font-bold text-2xl ">
-              All Categories
-            </h1>
-        </div>
-        <div className=" flex flex-row gap-3">
-            {/* select categories */}
-            <div className=" mt-4 max-md:hidden">
-                <AllCategoriesForm/>
+        <div className=" mt-3 max-md:mt-10  bg-white shadow-lg dark:shadow-gray-950 dark:bg-gray-800 p-2 w-[352px] justify-center rounded-md">
+            <div className=" flex gap-2">
+              <img src={shoesIcon} alt=" shoes icon" className=" h-8" />
+            <span className=" text-center font-bold text-2xl mb-2"> Shoes Categories </span>
             </div>
-            <div className=" mt-4">
-                <AllCategories/>
+             {/* AllCategoriesForm image */} 
+            <div className="">
+              <AllCategoriesFormImages />
             </div>
-        </div>
+        </div> 
     </section>
   )
 }

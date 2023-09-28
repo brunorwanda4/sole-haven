@@ -3,13 +3,13 @@ import {BsCaretUpFill,BsExclamationCircle,BsCheckCircle} from 'react-icons/bs'
 // start notification form
 const NotificationFrom = () => {
   return (
-   <div className=' notification-from absolute mt-8 -ml-64 w-80 '>
+   <div className=' notification-from absolute mt-8 -ml-64'>
      <BsCaretUpFill className="ml-52 text-red-600"/>
-     <ul className=' bg-white shadow-md rounded-md dark:bg-gray-800 hover:rounded-md'>
+     <ul className=' bg-white rounded-md dark:bg-gray-800 hover:rounded-md shadow-lg dark:shadow-gray-950  w-80 '>
         {/* notification list */}
         <li className=" flex flex-row gap-4 border-b-2 border-orange-600 px-2 py-2 duration-300 hover:bg-gray-200 dark:hover:bg-gray-700">
             <p className=" text-gray-500">You have <span>2</span> new notifications</p>
-            <a href="./" className=" bg-red-600 text-white font-bold text-sm p-1 rounded-2xl hover:bg-green-600 duration-300 ">
+            <a href="./" className=" bg-red-600 text-white font-bold text-sm p-1 rounded-2xl hover:bg-green-600 duration-500">
                 View All
             </a>
         </li>

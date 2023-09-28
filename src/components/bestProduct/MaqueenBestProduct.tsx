@@ -2,7 +2,7 @@
 import christiaIradukunda from '../../assets/img/people/christiaIradukunda.jpg'
 //icons
 import {FaStar,FaShare} from 'react-icons/fa'
-import {BsHeartFill,BsChatFill} from 'react-icons/bs'
+import {BsHeartFill,BsChatLeftFill} from 'react-icons/bs'
 //Maqueen
 import maqueen from '../../assets/img/shoes/Maqueen.jpg'
 //start
@@ -36,14 +36,14 @@ const MaqueenBestProduct = () => {
               </a>
               {/* share and like */}
               <div className=" flex flex-row gap-4 mt-3">
-                <a href="./" className=' text-2xl hover:scale-110 duration-300 hover:text-orange-600 active:text-orange-600'>
+                <button className=' text-2xl hover:scale-110 duration-300 hover:text-orange-600 active:text-orange-600 dark:text-white text-gray-500  dark:hover:text-orange-600'>
                   <FaShare/>
-                </a>
-                <button className=' text-2xl hover:scale-110 duration-300 hover:text-orange-600 active:text-orange-600'>
+                </button>
+                <button className=' text-2xl hover:scale-110 duration-300 hover:text-orange-600 active:text-orange-600 dark:text-white text-gray-500  dark:hover:text-orange-600'>
                   <BsHeartFill/>
                 </button>
-                <button className=' text-2xl hover:scale-110 duration-300 hover:text-orange-600 active:text-orange-600'>
-                  <BsChatFill/>
+                <button className=' text-2xl hover:scale-110 duration-300 hover:text-orange-600 active:text-orange-600 dark:text-white text-gray-500  dark:hover:text-orange-600'>
+                  <BsChatLeftFill/>
                 </button>
               </div>
            </div>

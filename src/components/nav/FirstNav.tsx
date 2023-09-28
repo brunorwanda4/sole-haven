@@ -57,10 +57,11 @@ const FirstNav = () => {
           <BsCaretDownFill className="text-base" />
         </button>
       </div>
+      {/* search */}
       <div className="max-lg:hidden">
         <SearchFrom />
       </div>
-      <div className="mt-4 gap-6 flex flex-row">
+      <div className="mt-4 gap-6 flex flex-row max-lg:hidden">
         {/* notification */}
         <button type="button" className="text-2xl" onClick={toggleNotification}>
           <span className="absolute text-white bg-orange-600 text-sm h-5 w-5 -mt-2 rounded-md animation-cool font-bold">
@@ -82,7 +83,7 @@ const FirstNav = () => {
       </div>
       <div className="mt-2 flex flex-row gap-2">
         {/* login or create account */}
-        <button className="text-3xl font-bold text-orange-950 hover:text-orange-600 duration-300">
+        <button className="text-3xl font-bold text-orange-950 hover:text-orange-600 duration-300 max-lg:mr-5">
           <BsPersonFill />
         </button>
       </div>

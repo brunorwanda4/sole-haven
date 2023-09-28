@@ -5,7 +5,6 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 import {CgDarkMode} from 'react-icons/cg'
 import Home from './Home';
 import TopProduct from './TopProduct';
-import Product from './Product';
 import Contact from './Contact';
 import Footer from './Footer';
 import Nike from './buy/dist/Nike';
@@ -38,7 +37,7 @@ const Navbar = (props: { toggleDarkMode: React.MouseEventHandler<HTMLButtonEleme
 
   return (
     <Router>
-      <header className={`navbar ${hideNavbar ? 'hidden' : ' flex flex-col fixed w-full shadow-cool-h bg-white dark:bg-zinc-950'}`}>
+      <header className={`navbar ${hideNavbar ? 'hidden' : ' flex flex-col fixed z-50 w-full shadow-cool-h bg-white dark:bg-zinc-950'}`}>
         {/* Dark mode button */}
         <div>
           <button
@@ -58,7 +57,6 @@ const Navbar = (props: { toggleDarkMode: React.MouseEventHandler<HTMLButtonEleme
       <Routes>
           <Route path='/' element={<Home/>} />
         <Route path='/categories' element={<CategoriesAll/>} />
-        <Route path='/product' element={<Product/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/topProduct' element={<TopProduct/>} />
         <Route path='/nike' element={<Nike/>} />

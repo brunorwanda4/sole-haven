@@ -120,3 +120,13 @@
     background: var(--orange);
     border-radius: 2px;
 }
+/* categories hover */
+.bg{
+    background: rgba(0, 0, 0, 0.63);
+}
+/* tailwind.css or your custom CSS file */
+.stroke-1 {
+    -webkit-text-stroke: 1px var(--orange);
+    -webkit-text-fill-color: white; 
+  }
+  
