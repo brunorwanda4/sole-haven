@@ -33,7 +33,7 @@ const AllCategoriesFormImages = () => {
     setIsHover(false);
   };
   return (
-    <div className=' overflow-scroll overflow-x-hidden max-h-[450px] flex flex-col gap-2 '>
+    <div className=' overflow-scroll overflow-x-hidden max-h-[450px] flex flex-col gap-2'>
         {/* sneakers  */}
         <a href='./' className=' group relative w-80 h-44 duration-500' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <img src={airJordan13} alt=" airJordan13" className='h-44 w-80 object-cover backdrop-blur-sm rounded-lg'/>

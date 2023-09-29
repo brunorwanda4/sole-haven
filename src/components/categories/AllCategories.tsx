@@ -1,10 +1,9 @@
-//start all categories
+import Sneakers from "./Sneakers"
+// start All categories pages 
 const AllCategories = () => {
-  constructor(this.props.first)
   return (
-    <div>
-        {/* welcome categories */}
-        
+    <div className=" max-lg:justify-center items-center max-lg:ml-72">
+      <Sneakers/>
     </div>
   )
 }
