@@ -12,7 +12,7 @@ const BuyNikeJordanOne1Images = () => {
     <div>
         {/* big shoes */}
         <div>
-            <img src={nikeOne} alt="Jordan one image 1" className=' duration-300 rounded-md shadow-lg dark:shadow-gray-950 max-xl:w-[480px]'/>
+            <img src={nikeOne} alt="Jordan one image 1" className=' duration-300 rounded-md shadow-lg dark:shadow-gray-950 object-cover w-[480px]'/>
         </div>
         {/* small shoes */}
         <div className=' flex flex-row gap-2 mt-2'>
