@@ -1,0 +1,47 @@
+import React, { useEffect, useState } from 'react';
+import bestOne from '../../assets/img/shoes/Maqueen.jpg';
+import bestTwo from '../../assets/img/Alexandra.png';
+import bestThree from '../../assets/img/gucci.png';
+
+const BrunoRwandaSneakersNikeJordanOne1 = () => {
+  useEffect(() => {
+    document.title = 'Jordan one';
+  }, []);
+
+  // State to keep track of the selected shoe
+  const [selectedShoe, setSelectedShoe] = useState(bestOne);
+
+  // Function to change the selected shoe
+  const changeShoe = (newShoe) => {
+    setSelectedShoe(newShoe);
+  };
+
+  return (
+    <section className="pt-24">
+      {/* big shoes div shoes */}
+      <div>
+        <img src={selectedShoe} alt="" />
+      </div>
+      {/* small shoes one div */}
+      <div>
+        <img
+          src={bestThree}
+          alt=""
+          onClick={() => changeShoe(bestThree)}
+          style={{ cursor: 'pointer' }}
+        />
+      </div>
+      {/* small shoes two div */}
+      <div>
+        <img
+          src={bestTwo}
+          alt=""
+          onClick={() => changeShoe(bestTwo)}
+          style={{ cursor: 'pointer' }}
+        />
+      </div>
+    </section>
+  );
+};
+
+export default BrunoRwandaSneakersNikeJordanOne1;

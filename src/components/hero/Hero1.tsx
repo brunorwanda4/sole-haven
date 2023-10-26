@@ -1,128 +1,83 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState,useEffect } from 'react'
-//icons
-
-// nike 1 shoes
-import nikeOneOne from '../../assets/img/shoes/nike/nike1.jpg'
-import nikeOneTwo from '../../assets/img/shoes/nike/nike1-2.jpg'
-import nikeOneThree from '../../assets/img/shoes/nike/nike1-3.jpeg'
-// nike 2 shoes
-import nikeTwoOne from '../../assets/img/shoes/nike/nike2.jpg'
-import nikeTwoTwo from '../../assets/img/shoes/nike/nike2-2.jpg'
-import nikeTwoThree from '../../assets/img/shoes/nike/nike2-3.jpg'
-// nike 3 shoes
-import nikeThreeOne from '../../assets/img/shoes/nike/nike3.jpg'
-import nikeThreeTwo from '../../assets/img/shoes/nike/nike3-2.jpg'
-import nikeThreeThree from '../../assets/img/shoes/nike/nike3-3.jpg'
+import { NavLink } from 'react-router-dom'
+import { useState,SetStateAction } from 'react'
+//image
+import gucciOneOne from '../../assets/img/shoes/nike/nike1copy.jpg'
+import gucciOneTwo from '../../assets/img/shoes/nike/nike1-2copy.jpg'
+import gucciOneThree from '../../assets/img/shoes/nike/nike1-3copy.jpg'
+import AirTwoBestOne from '../../assets/img/shoes/nike/nike2-2.jpg'
+import AirJordanFourBestTwo from '../../assets/img/shoes/nike/nike3.jpg'
+import { SiNike } from 'react-icons/si'
 //start
 const Hero1 = () => {
-  // nike one image random
-  const [nikeOne] = useState([nikeOneOne, nikeOneTwo,  nikeOneThree]);
-  const [randomNikeOne, setRandomNikeOne] = useState('');
-
-  useEffect(() => {
-    getRandomNikeOne();
-  }, []);
-
-  const getRandomNikeOne = () => {
-    const nikeImageOneIndex = Math.floor(Math.random() * nikeOne.length);
-    const randomNikeOne = nikeOne[nikeImageOneIndex];
-    setRandomNikeOne(randomNikeOne);
-  };
-  // nike two image random
-  const [nikeTwo] = useState([nikeTwoOne,nikeTwoTwo,nikeTwoThree])
-  const [randomNikeTwo, setRandomNikeTwo] = useState('');
-
-  useEffect(() => {
-    getRandomNikeTwo();
-  }, []);
-
-  const getRandomNikeTwo = () => {
-    const nikeImageTwoIndex = Math.floor(Math.random() * nikeTwo.length);
-    const randomNikeTwo = nikeTwo[nikeImageTwoIndex];
-    setRandomNikeTwo(randomNikeTwo);
-  };
-  // nike three images random
-  const [nikeThree]=useState ([nikeThreeOne,nikeThreeTwo,nikeThreeThree]);
-  const [randomNikeThree, setRandomNikeThree] = useState('');
-
-  useEffect(() => {
-    getRandomNikeThree();
-  }, []);
-
-  const getRandomNikeThree = () => {
-    const nikeImageThreeIndex = Math.floor(Math.random() * nikeThree.length);
-    const randomNikeThree = nikeThree[nikeImageThreeIndex];
-    setRandomNikeThree(randomNikeThree);
-  };
-  
+     //  shoes change position 
+  const [bigShoes,setBigShoes] = useState(gucciOneOne);
+  const changeShoes = (newShoes: SetStateAction<string>) => {
+    setBigShoes(newShoes);
+  }
   return (
-    <div className=' flex flex-col m-4 md:flex-row'>
+    <div className=' mt-2 flex gap-2 max-md:flex-col'>
         {/* shoes information */}
-        <div className=' flex flex-col gap-2 transition-cool'>
-            {/* shoes header */}
-            <h1 className=' font-bold text-4xl md:text-5xl  transition-cool bg-white'>
-                The New Arrival <br />
-                <span className=' text-orange-600'> Nike</span> Shoes
-            </h1>
-            {/* information */}
-            <p className=' text-gray-600 text-sm md:text-base transition-cool md:mt-4 '>
-            Experience unparalleled <br />  
-            styled performance with Nike shoes, <br /> <br />
-            crafted to elevate your every step.
+        <div className=" flex flex-col gap-4 w-1/2">
+            <div className=" flex gap-2">
+                <h2 className=" text-5xl font-bold">Air <span className='text-orange-600'>Jordan</span> 1</h2>
+                <SiNike className=" text-5xl text-orange-600"/>
+            </div>
+            <p className=" text-gray-400">
+                Experience unparalleled styled performance <br />  
+                styled performance with Nike shoes.
             </p>
-            {/* buy link */}
-            <a href="./" className=' font-bold  transition-cool bg-orange-950 shadow-cool hover:bg-orange-600 text-white md:h-10 md:w-28 md:p-2 md:pl-4 text-base p-1 pl-2 h-8 w-24 rounded-3xl animation-cool md:mt-8 mt-4'>
-                Shop Now
-            </a>
-            <a href="./" className=' md:ml-44 ml-28  md:-mt-12 -mt-10  font-bold  transition-cool bg-orange-600 shadow-cool-o hover:bg-orange-950 text-white md:h-10 md:w-28 md:p-2 md:pl-4 text-base p-1 pl-2 h-8 w-24 rounded-3xl animation-cool'>
-                35000Frw
-            </a>
-            {/* customer */}
-            <div className=' md:mt-8 mt-4 flex flex-row md:gap-4 gap-3 transition-cool'>
-                <div className=' flex flex-col gap-1'>
-                    <h2 className=' font-bold text-3xl md:text-4xl font-mono'>
-                        1K<span className=' text-orange-600'>+</span>
-                    </h2>
-                    <span className=' text-gray-400 '>
-                        Brands
-                    </span>
+            {/* buy button */}
+            <div className=" flex gap-4">
+                <a href="./" className=" text-lg p-2 font-bold bg-orange-600 rounded-3xl shadow-cool-o duration-300 hover:bg-orange-950  text-white">Shop Now</a>
+                <NavLink to="BrunoRwanda/sneakers/Nike/jordanOne/1" className=" text-lg p-2 font-bold bg-red-600 rounded-3xl shadow-cool duration-300 hover:bg-orange-950  text-white">28kFRW</NavLink>
+            </div>
+            <div className=" flex gap-4 ml-4 mt-4">
+                <div className=" flex flex-col">
+                    <h3 className=" font-bold text-5xl ">
+                         1.5K<span className=" text-orange-600">+</span>
+                    </h3>
+                    <p className=" text-base text-gray-400">Brands</p>
                 </div>
-                <div className=' flex flex-col gap-1'>
-                    <h2 className=' font-bold text-3xl md:text-4xl font-mono'>
-                        250K<span className=' text-orange-600'>+</span>
-                    </h2>
-                    <span className=' text-gray-400 '>
-                        Shops
-                    </span>
+                <div className=" flex flex-col">
+                    <h3 className=" font-bold text-5xl">
+                         410K<span className=" text-orange-600">+</span>
+                    </h3>
+                    <p className=" text-base text-gray-400">Shops</p>
                 </div>
-                <div className=' flex flex-col gap-1'>
-                    <h2 className=' font-bold text-3xl md:text-4xl font-mono'>
-                        750K<span className=' text-orange-600'>+</span>
-                    </h2>
-                    <span className=' text-gray-400 '>
-                        Customer
-                    </span>
+                <div className=" flex flex-col">
+                    <h3 className=" font-bold text-5xl">
+                         992K<span className=" text-orange-600">+</span>
+                    </h3>
+                    <p className=" text-base text-gray-400">Customer</p>
                 </div>
             </div>
+                {/* other image */}
+                <div className=' flex flex-col gap-2'>
+                    <h3 className=" text-2xl cursor-pointer text-center text-red-600 font-bold">Other Products</h3>
+                    <div className=' flex gap-2'>
+                        <img src={gucciOneOne} onClick={() => changeShoes(gucciOneOne)} alt="airJordanFour image"  className=' h-36 cursor-pointer shadow-lg dark:shadow-gray-950 rounded-md hover:scale-105 duration-500 '/>
+                        <img src={gucciOneTwo} onClick={() => changeShoes(gucciOneTwo)} alt="airJordanFour image"  className=' h-36 cursor-pointer shadow-lg dark:shadow-gray-950 rounded-md hover:scale-105 duration-500 '/>
+                        <img src={gucciOneThree} onClick={() => changeShoes(gucciOneThree)} alt="airJordanFour image"  className=' h-36 cursor-pointer shadow-lg dark:shadow-gray-950 rounded-md hover:scale-105 duration-500 '/>
+                    </div>
+                </div>
         </div>
-        {/* shoes image */}
-        <div className=' flex lg:flex-row flex-col'>
-           <a href="./">
-             <img src={randomNikeOne} alt=" Jordan one image" className=' md:h-96 md:w-auto h-72'  />
-           </a>
-            {/* anther product image */}
-            <div className=' gap-4 flex lg:flex-col flex-row lg:pt-0 pt-10'>
-                <a href="./">
-                 <img src={randomNikeTwo} alt="Jordan 1 Mid " className=' h-44 w-44 rounded-md shadow-xl -mt-16 shadow-cool-s transition-cool'/>
-                </a>
-                <a href="./">
-                 <img src={randomNikeThree} alt="Nike sport shoes image" className=' h-44 w-44 rounded-md shadow-xl lg:-mt-0 -mt-16 shadow-cool-s transition-cool'/>
-                </a>
-
-            </div>
+        {/* big shoes */}
+        <div className=' flex flex-row mt-4 gap-4 max-lg:flex-col'>
+          <NavLink to="BrunoRwanda/sneakers/Nike/jordanOne/1">
+            <img src={bigShoes} alt="airJordanFourOne" className=' h-[465px] w-[465px] shadow-lg dark:shadow-gray-950  rounded-md'/>
+          </NavLink>
+         <div className=' flex flex-col gap-4 max-lg:flex-row'>
+            <a href="./" className=' group'>
+                <img src={AirTwoBestOne} alt=" air jordan six" className=' h-56 w-56 rounded-md shadow-md dark:shadow-gray-950 hover:scale-105 duration-500'/>
+                <span className=' hidden group-hover:block text-2xl bg-white text-orange-600 px-2 py-1 rounded-md ml-6 font-bold absolute -mt-12 z-20'>22KRFW</span>
+            </a>
+            <a href="./" className=' group duration-500'>
+                <img src={AirJordanFourBestTwo} alt=" air jordan five" className=' h-56 w-56 rounded-md shadow-md dark:shadow-gray-950 hover:scale-105 duration-500'/>
+                <span className=' hidden group-hover:block text-2xl bg-white text-orange-600 px-2 py-1 rounded-md ml-6 font-bold absolute -mt-12 z-20'>20KRFW</span>
+            </a>
+         </div>
         </div>
-
     </div>
     
   )
