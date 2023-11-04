@@ -21,7 +21,7 @@ const FirstNav = () => {
   const [notification, setNotification] = useState(true);
   const toggleNotification = () => {
     setNotification(!notification);
-  };
+    };
   return (
     <div className="flex flex-row gap-1 justify-between">
       <NavLink to="./" className="flex flex-row">

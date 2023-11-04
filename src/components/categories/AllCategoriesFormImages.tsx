@@ -37,7 +37,7 @@ const AllCategoriesFormImages = () => {
         {/* sneakers  */}
         <a href='./' className=' group relative w-80 h-44 duration-500' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <img src={airJordan13} alt=" airJordan13" className='h-44 w-80 object-cover backdrop-blur-sm rounded-lg'/>
-            <div className={` ${isHover ? 'duration-500' : ''} h-44 w-80 backdrop-blur-[2px] bg -mt-44 group-hover:hidden rounded-md`}></div>
+            <div className={` ${isHover ? 'duration-500' : ''} h-44 w-80 backdrop-blur-[2px] -mt-44 group-hover:hidden rounded-md`}></div>
             <div className='absolute -mt-24 ml-4 flex group-hover:hidden gap-2'>
               <img src={sneakersIcon} alt=" sneakersIcon"  className=' h-[54px]'/>
               <h3 className=' text-7xl font-allura stroke-1'>Sneakers</h3>
