@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        allura: ['Allura', 'cursive']
-      }
+        allura: ['Allura', 'cursive'],
+      },
     },
     
   },

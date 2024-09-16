@@ -2,8 +2,12 @@ import AllCategoriesFormImages from "./categories/AllCategoriesFormImages"
 //icons
 import shoesIcon from '../assets/img/icons/shoesIcon.png'
 import AllCategories from "./categories/AllCategories"
+import { useEffect } from "react"
 //start categories 
 const CategoriesAll = () => {
+  useEffect(() => {
+    document.title = "Categories";
+  }, []);
   return (
     <section className=" pt-24 p-2 pb-4 flex gap-4">
         {/* title  */}

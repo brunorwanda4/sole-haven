@@ -1,7 +1,6 @@
-import React, { useState, useEffect, MouseEventHandler } from 'react';
+import React, { useState, useEffect,} from 'react';
 // icons
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { FaSun, FaMoon } from 'react-icons/fa';
 import {CgDarkMode} from 'react-icons/cg'
 import Home from './Home';
 import TopProduct from './TopProduct';
@@ -18,7 +17,6 @@ const Navbar = (props: { toggleDarkMode: React.MouseEventHandler<HTMLButtonEleme
 
   useEffect(() => {
     let prevScrollPos = window.pageYOffset;
-
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const scrollingDown = currentScrollPos > prevScrollPos;
