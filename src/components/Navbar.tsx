@@ -1,19 +1,21 @@
-import React, { useState, useEffect, MouseEventHandler } from 'react';
+import React, { useEffect, useState } from 'react';
 // icons
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { FaSun, FaMoon } from 'react-icons/fa';
-import {CgDarkMode} from 'react-icons/cg'
-import Home from './Home';
-import TopProduct from './TopProduct';
+import { CgDarkMode } from 'react-icons/cg';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import CategoriesAll from './CategoriesAll';
 import Contact from './Contact';
 import Footer from './Footer';
-import Nike from './buy/dist/Nike';
+import Home from './Home';
+import TopProduct from './TopProduct';
+import BrunoRwandaSneakersNikeJordanOne1 from './buy/BrunoRwandaSneakersNikeJordanOne1';
+import BuyNikeJordanOne1BuyPage from './buy/BuyNikeJordanOne1BuyPage';
 import FirstNav from './nav/FirstNav';
 import SecondNav from './nav/SecondNav';
-import CategoriesAll from './CategoriesAll';
-import BrunoRwandaSneakersNikeJordanOne1 from './buy/BrunoRwandaSneakersNikeJordanOne1';
 
-const Navbar = (props: { toggleDarkMode: React.MouseEventHandler<HTMLButtonElement> | undefined; DarkMode: any; }) => {
+const Navbar = (props: {
+  toggleDarkMode: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  DarkMode: any;
+}) => {
   const [hideNavbar, setHideNavbar] = useState(false);
 
   useEffect(() => {
@@ -37,16 +39,25 @@ const Navbar = (props: { toggleDarkMode: React.MouseEventHandler<HTMLButtonEleme
 
   return (
     <Router>
-      <header className={`navbar ${hideNavbar ? 'hidden' : ' flex flex-col fixed z-50 w-full shadow-cool-h bg-white dark:bg-zinc-950'}`}>
+      <header
+        className={`navbar ${
+          hideNavbar
+            ? 'hidden'
+            : ' flex flex-col fixed z-50 w-full shadow-cool-h bg-white dark:bg-zinc-950'
+        }`}
+      >
         {/* Dark mode button */}
         <div>
           <button
-            type="button" className="font-bold text-3xl text-orange-600 dark:text-orange-600 absolute text-end ml-[94.5%] mt-5" onClick={props.toggleDarkMode} >
-             <CgDarkMode />
+            type="button"
+            className="font-bold text-3xl text-orange-600 dark:text-orange-600 absolute text-end ml-[94.5%] mt-5"
+            onClick={props.toggleDarkMode}
+          >
+            <CgDarkMode />
           </button>
         </div>
         {/* First nav */}
-        <div className=" p-2">
+        <div className="p-2 ">
           <FirstNav />
         </div>
         {/* Second nav */}
@@ -55,12 +66,15 @@ const Navbar = (props: { toggleDarkMode: React.MouseEventHandler<HTMLButtonEleme
         </div>
       </header>
       <Routes>
-          <Route path='/' element={<Home/>} />
-        <Route path='/categories' element={<CategoriesAll/>} />
-        <Route path='/contact' element={<Contact/>} />
-        <Route path='/topProduct' element={<TopProduct/>} />
-        <Route path='/nike' element={<Nike/>} />
-        <Route path='/BrunoRwanda/sneakers/Nike/jordanOne/1' element={<BrunoRwandaSneakersNikeJordanOne1/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<CategoriesAll />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/topProduct" element={<TopProduct />} />
+        <Route path="/nike" element={<BuyNikeJordanOne1BuyPage />} />
+        <Route
+          path="/BrunoRwanda/sneakers/Nike/jordanOne/1"
+          element={<BrunoRwandaSneakersNikeJordanOne1 />}
+        />
       </Routes>
       <Footer />
     </Router>
